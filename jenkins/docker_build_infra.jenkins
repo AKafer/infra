@@ -32,7 +32,7 @@ pipeline {
         stage("renew server") {
             steps {
                 echo " ============== go to server =================="
-                sh 'ssh root@infra "cd /root/infra && docker-compose down --remove-orphans && docker-compose up -d"'
+                sh 'ssh root@infra "cd /root/infra && docker compose down --remove-orphans && docker compose up -d"'
             }
         }
     }
