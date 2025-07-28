@@ -31,9 +31,13 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.grafana.rule=Host(`${PROJECT_HOST}`) && PathPrefix(`/grafana`)"
+      - "traefik.http.middlewares.grafana-strip.stripprefix.prefixes=/grafana"
+      - "traefik.http.routers.grafana.middlewares=grafana-strip"
       - "traefik.http.services.grafana.loadbalancer.server.port=3000"
       - "traefik.http.routers.grafana.tls.certresolver=le"
     environment:
+      - GF_SERVER_ROOT_URL=%(protocol)s://%(domain)s/grafana/
+      - GF_SERVER_SERVE_FROM_SUB_PATH=true
       - GF_SECURITY_ADMIN_USER=${METRICS_USER}
       - GF_SECURITY_ADMIN_PASSWORD=${METRICS_PASSWORD}
     depends_on:
@@ -51,11 +55,11 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.prometheus.rule=Host(`${PROJECT_HOST}`) && PathPrefix(`/prometheus`)"
+      - "traefik.http.routers.prometheus.rule=Host(`prometheus.${PROJECT_HOST}`)"
       - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
       - "traefik.http.routers.prometheus.tls.certresolver=le"
     volumes:
-      - ./conf/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./conf:/etc/prometheus:ro
       - ./metrics_pwd:/etc/prometheus/metrics_pwd:ro
       - prometheus_data:/prometheus
     command:
@@ -68,7 +72,7 @@ services:
     container_name: infra_loki
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.loki.rule=Host(`${PROJECT_HOST}`) && PathPrefix(`/loki`)"
+      - "traefik.http.routers.loki.rule=Host(`loki.${PROJECT_HOST}`)"
       - "traefik.http.services.loki.loadbalancer.server.port=3100"
       - "traefik.http.routers.loki.tls.certresolver=le"
     volumes:
