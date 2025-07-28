@@ -59,7 +59,7 @@ services:
       - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
       - "traefik.http.routers.prometheus.tls.certresolver=le"
     volumes:
-      - ./conf:/etc/prometheus:ro
+      - ./conf/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - ./metrics_pwd:/etc/prometheus/metrics_pwd:ro
       - prometheus_data:/prometheus
     command:
