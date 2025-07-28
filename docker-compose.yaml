@@ -31,8 +31,6 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.grafana.rule=Host(`${PROJECT_HOST}`) && PathPrefix(`/grafana`)"
-      - "traefik.http.middlewares.grafana-strip.stripprefix.prefixes=/grafana"
-      - "traefik.http.routers.grafana.middlewares=grafana-strip"
       - "traefik.http.services.grafana.loadbalancer.server.port=3000"
       - "traefik.http.routers.grafana.tls.certresolver=le"
     environment:
