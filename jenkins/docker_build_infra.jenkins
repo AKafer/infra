@@ -19,12 +19,12 @@ pipeline {
                 }
             }
         }
-        stage("copy docker_compose file") {
+        stage("copy config files") {
             steps {
                 echo " ============== copy files =================="
                 dir ('.') {
                     sh '''
-                    scp docker-compose.yaml root@infra:/root/infra/docker-compose.yaml
+                    scp docker-compose.yaml root@infra:/root/infra/docker-compose.yaml && rm -rf /root/infra/conf/ && scp -r conf/ root@infra:/root/infra/conf/
                     '''
                 }
             }
