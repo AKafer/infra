@@ -22,7 +22,7 @@ pipeline {
         stage("copy docker_compose file") {
             steps {
                 echo " ============== copy files =================="
-                dir ('./ci') {
+                dir ('.') {
                     sh '''
                     scp docker-compose.yaml root@infra:/root/infra/docker-compose.yaml
                     '''
