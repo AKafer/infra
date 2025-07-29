@@ -66,10 +66,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.loki.rule=Host(`${PROJECT_HOST}`) && PathPrefix(`/loki`)"
-      - "traefik.http.middlewares.loki-strip.stripprefix.prefixes=/loki"
-      - "traefik.http.routers.loki.middlewares=loki-strip"
       - "traefik.http.services.loki.loadbalancer.server.port=3100"
-      - "traefik.http.routers.loki.tls.certresolver=le"
     volumes:
       - ./conf/loki.yaml:/etc/loki/local-config.yaml
       - loki_data:/loki
