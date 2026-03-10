@@ -1,9 +1,17 @@
 version: "3.8"
 
+x-logging: &default-logging
+  logging:
+    driver: "json-file"
+    options:
+      max-size: "50m"
+      max-file: "3"
+
 services:
   traefik:
     image: traefik:latest
     container_name: infra_traefik
+    <<: *default-logging
     env_file:
       - .env
     command:
@@ -28,6 +36,7 @@ services:
   grafana:
     image: grafana/grafana:latest
     container_name: infra_grafana
+    <<: *default-logging
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.grafana.rule=Host(`${PROJECT_HOST}`) && PathPrefix(`/grafana`)"
@@ -50,6 +59,7 @@ services:
   prometheus:
     image: prom/prometheus:v2.52.0
     container_name: infra_prometheus
+    <<: *default-logging
     restart: unless-stopped
     volumes:
       - ./conf/prometheus.yml:/etc/prometheus/prometheus.yml:ro
@@ -57,12 +67,15 @@ services:
       - prometheus_data:/prometheus
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.retention.time=15d"
+      - "--storage.tsdb.retention.size=2GB"
     networks:
       - monitor
 
   loki:
     image: grafana/loki:latest
     container_name: infra_loki
+    <<: *default-logging
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.loki.rule=Host(`${PROJECT_HOST}`) && PathPrefix(`/loki`)"
