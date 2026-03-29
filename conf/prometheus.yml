@@ -17,7 +17,7 @@ scrape_configs:
       username: 'admin@gmail.com'
       password_file: /etc/prometheus/metrics_pwd
     metrics_path: /metrics
-    scheme: http
+    scheme: https
     static_configs:
       - targets: ["asutp.ias-app.ru"]
         labels:
@@ -28,7 +28,7 @@ scrape_configs:
       username: 'admin@gmail.com'
       password_file: /etc/prometheus/metrics_pwd
     metrics_path: /metrics
-    scheme: http
+    scheme: https
     static_configs:
       - targets: ["test.ias-app.ru"]
         labels:
@@ -39,7 +39,7 @@ scrape_configs:
       username: 'admin@gmail.com'
       password_file: /etc/prometheus/metrics_pwd
     metrics_path: /metrics
-    scheme: http
+    scheme: https
     static_configs:
       - targets: ["avik.ias-app.ru"]
         labels:
@@ -50,7 +50,7 @@ scrape_configs:
       username: 'admin@gmail.com'
       password_file: /etc/prometheus/metrics_pwd
     metrics_path: /metrics
-    scheme: http
+    scheme: https
     static_configs:
       - targets: ["metek.ias-app.ru"]
         labels:
@@ -61,7 +61,7 @@ scrape_configs:
       username: 'admin@gmail.com'
       password_file: /etc/prometheus/metrics_pwd
     metrics_path: /metrics
-    scheme: http
+    scheme: https
     static_configs:
       - targets: ["sptk.ias-app.ru"]
         labels:
@@ -72,7 +72,7 @@ scrape_configs:
       username: 'admin@gmail.com'
       password_file: /etc/prometheus/metrics_pwd
     metrics_path: /metrics
-    scheme: http
+    scheme: https
     static_configs:
       - targets: ["titov.ias-app.ru"]
         labels:
