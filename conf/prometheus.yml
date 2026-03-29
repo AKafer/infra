@@ -11,3 +11,69 @@ scrape_configs:
     scheme: http
     static_configs:
       - targets: ["fitbox.bounceme.net"]
+
+  - job_name: "ins_control_asutp"
+    basic_auth:
+      username: 'admin@gmail.com'
+      password_file: /etc/prometheus/metrics_pwd
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: ["asutp.ias-app.ru"]
+        labels:
+          instance: "asutp"
+
+  - job_name: "ins_control_test"
+    basic_auth:
+      username: 'admin@gmail.com'
+      password_file: /etc/prometheus/metrics_pwd
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: ["test.ias-app.ru"]
+        labels:
+          instance: "test"
+
+  - job_name: "ins_control_avik"
+    basic_auth:
+      username: 'admin@gmail.com'
+      password_file: /etc/prometheus/metrics_pwd
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: ["avik.ias-app.ru"]
+        labels:
+          instance: "avik"
+
+  - job_name: "ins_control_metek"
+    basic_auth:
+      username: 'admin@gmail.com'
+      password_file: /etc/prometheus/metrics_pwd
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: ["metek.ias-app.ru"]
+        labels:
+          instance: "metek"
+
+  - job_name: "ins_control_sptk_ub1"
+    basic_auth:
+      username: 'admin@gmail.com'
+      password_file: /etc/prometheus/metrics_pwd
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: ["sptk.ias-app.ru"]
+        labels:
+          instance: "sptk"
+
+  - job_name: "ins_control_titov_ub2"
+    basic_auth:
+      username: 'admin@gmail.com'
+      password_file: /etc/prometheus/metrics_pwd
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: ["titov.ias-app.ru"]
+        labels:
+          instance: "titov"
