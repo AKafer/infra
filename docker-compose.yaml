@@ -52,6 +52,8 @@ services:
       - loki
     volumes:
       - ./conf/grafana/datasources.yaml:/etc/grafana/provisioning/datasources/datasources.yaml
+      - ./conf/grafana/provisioning/dashboards.yaml:/etc/grafana/provisioning/dashboards/dashboards.yaml
+      - ./conf/grafana/provisioning:/etc/grafana/provisioning/dashboards
       - grafana_data:/var/lib/grafana
     networks:
       - monitor
