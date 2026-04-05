@@ -77,3 +77,51 @@ scrape_configs:
       - targets: ["titov.ias-app.ru"]
         labels:
           instance: "titov"
+
+  - job_name: "ping_asutp"
+    metrics_path: /ping/
+    scheme: https
+    static_configs:
+      - targets: ["asutp.ias-app.ru"]
+        labels:
+          instance: "asutp"
+
+  - job_name: "ping_test"
+    metrics_path: /ping/
+    scheme: https
+    static_configs:
+      - targets: ["test.ias-app.ru"]
+        labels:
+          instance: "test"
+
+  - job_name: "ping_avik"
+    metrics_path: /ping/
+    scheme: https
+    static_configs:
+      - targets: ["avik.ias-app.ru"]
+        labels:
+          instance: "avik"
+
+  - job_name: "ping_metek"
+    metrics_path: /ping/
+    scheme: https
+    static_configs:
+      - targets: ["metek.ias-app.ru"]
+        labels:
+          instance: "metek"
+
+  - job_name: "ping_sptk"
+    metrics_path: /ping/
+    scheme: https
+    static_configs:
+      - targets: ["sptk.ias-app.ru"]
+        labels:
+          instance: "sptk"
+
+  - job_name: "ping_titov"
+    metrics_path: /ping/
+    scheme: https
+    static_configs:
+      - targets: ["titov.ias-app.ru"]
+        labels:
+          instance: "titov"
