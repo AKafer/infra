@@ -2,233 +2,53 @@
   "title": "Доступность приложений",
   "uid": "ins_control_availability",
   "schemaVersion": 38,
-  "version": 2,
+  "version": 3,
   "refresh": "1m",
   "time": { "from": "now-1h", "to": "now" },
   "panels": [
     {
       "id": 1,
-      "title": "asutp.ias-app.ru",
+      "title": "Статус сервисов",
       "type": "state-timeline",
-      "gridPos": { "h": 7, "w": 12, "x": 0, "y": 0 },
+      "gridPos": { "h": 16, "w": 24, "x": 0, "y": 0 },
       "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_asutp\"}",
-          "legendFormat": "asutp"
-        }
-      ],
-      "options": {
-        "mergeValues": true,
-        "showValue": "auto",
-        "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" }
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "thresholds" },
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "red", "value": null },
-              { "color": "green", "value": 1 }
-            ]
-          },
-          "mappings": [
-            {
-              "type": "value",
-              "options": {
-                "0": { "text": "Недоступен", "color": "red", "index": 0 },
-                "1": { "text": "Работает", "color": "green", "index": 1 }
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": 2,
-      "title": "test.ias-app.ru",
-      "type": "state-timeline",
-      "gridPos": { "h": 7, "w": 12, "x": 12, "y": 0 },
-      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-      "targets": [
+          "legendFormat": "asutp.ias-app.ru"
+        },
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_test\"}",
-          "legendFormat": "test"
-        }
-      ],
-      "options": {
-        "mergeValues": true,
-        "showValue": "auto",
-        "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" }
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "thresholds" },
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "red", "value": null },
-              { "color": "green", "value": 1 }
-            ]
-          },
-          "mappings": [
-            {
-              "type": "value",
-              "options": {
-                "0": { "text": "Недоступен", "color": "red", "index": 0 },
-                "1": { "text": "Работает", "color": "green", "index": 1 }
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": 3,
-      "title": "avik.ias-app.ru",
-      "type": "state-timeline",
-      "gridPos": { "h": 7, "w": 12, "x": 0, "y": 7 },
-      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-      "targets": [
+          "legendFormat": "test.ias-app.ru"
+        },
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_avik\"}",
-          "legendFormat": "avik"
-        }
-      ],
-      "options": {
-        "mergeValues": true,
-        "showValue": "auto",
-        "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" }
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "thresholds" },
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "red", "value": null },
-              { "color": "green", "value": 1 }
-            ]
-          },
-          "mappings": [
-            {
-              "type": "value",
-              "options": {
-                "0": { "text": "Недоступен", "color": "red", "index": 0 },
-                "1": { "text": "Работает", "color": "green", "index": 1 }
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": 4,
-      "title": "metek.ias-app.ru",
-      "type": "state-timeline",
-      "gridPos": { "h": 7, "w": 12, "x": 12, "y": 7 },
-      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-      "targets": [
+          "legendFormat": "avik.ias-app.ru"
+        },
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_metek\"}",
-          "legendFormat": "metek"
-        }
-      ],
-      "options": {
-        "mergeValues": true,
-        "showValue": "auto",
-        "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" }
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "thresholds" },
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "red", "value": null },
-              { "color": "green", "value": 1 }
-            ]
-          },
-          "mappings": [
-            {
-              "type": "value",
-              "options": {
-                "0": { "text": "Недоступен", "color": "red", "index": 0 },
-                "1": { "text": "Работает", "color": "green", "index": 1 }
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": 5,
-      "title": "sptk.ias-app.ru",
-      "type": "state-timeline",
-      "gridPos": { "h": 7, "w": 12, "x": 0, "y": 14 },
-      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-      "targets": [
+          "legendFormat": "metek.ias-app.ru"
+        },
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_sptk_ub1\"}",
-          "legendFormat": "sptk"
-        }
-      ],
-      "options": {
-        "mergeValues": true,
-        "showValue": "auto",
-        "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" }
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": { "mode": "thresholds" },
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              { "color": "red", "value": null },
-              { "color": "green", "value": 1 }
-            ]
-          },
-          "mappings": [
-            {
-              "type": "value",
-              "options": {
-                "0": { "text": "Недоступен", "color": "red", "index": 0 },
-                "1": { "text": "Работает", "color": "green", "index": 1 }
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": 6,
-      "title": "titov.ias-app.ru",
-      "type": "state-timeline",
-      "gridPos": { "h": 7, "w": 12, "x": 12, "y": 14 },
-      "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-      "targets": [
+          "legendFormat": "sptk.ias-app.ru"
+        },
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_titov_ub2\"}",
-          "legendFormat": "titov"
+          "legendFormat": "titov.ias-app.ru"
         }
       ],
       "options": {
         "mergeValues": true,
         "showValue": "auto",
         "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" }
+        "legend": { "displayMode": "list", "placement": "bottom" }
       },
       "fieldConfig": {
         "defaults": {
