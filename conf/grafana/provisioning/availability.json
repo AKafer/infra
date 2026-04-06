@@ -17,7 +17,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-          "expr": "up{job=\"ping_asutp\"}",
+          "expr": "up{job=\"ins_control_asutp\"}",
           "legendFormat": "asutp",
           "refId": "A"
         }
@@ -41,8 +41,13 @@
             ]
           },
           "mappings": [
-            { "type": "value", "options": { "0": { "text": "Недоступен", "color": "red", "index": 0 } } },
-            { "type": "value", "options": { "1": { "text": "Работает", "color": "green", "index": 1 } } }
+            {
+              "type": "value",
+              "options": {
+                "0": { "text": "Недоступен", "color": "red", "index": 0 },
+                "1": { "text": "Работает", "color": "green", "index": 1 }
+              }
+            }
           ],
           "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
         },
@@ -58,7 +63,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-          "expr": "up{job=\"ping_test\"}",
+          "expr": "up{job=\"ins_control_test\"}",
           "legendFormat": "test",
           "refId": "A"
         }
@@ -82,8 +87,13 @@
             ]
           },
           "mappings": [
-            { "type": "value", "options": { "0": { "text": "Недоступен", "color": "red", "index": 0 } } },
-            { "type": "value", "options": { "1": { "text": "Работает", "color": "green", "index": 1 } } }
+            {
+              "type": "value",
+              "options": {
+                "0": { "text": "Недоступен", "color": "red", "index": 0 },
+                "1": { "text": "Работает", "color": "green", "index": 1 }
+              }
+            }
           ],
           "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
         },
@@ -99,7 +109,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-          "expr": "up{job=\"ping_avik\"}",
+          "expr": "up{job=\"ins_control_avik\"}",
           "legendFormat": "avik",
           "refId": "A"
         }
@@ -123,8 +133,13 @@
             ]
           },
           "mappings": [
-            { "type": "value", "options": { "0": { "text": "Недоступен", "color": "red", "index": 0 } } },
-            { "type": "value", "options": { "1": { "text": "Работает", "color": "green", "index": 1 } } }
+            {
+              "type": "value",
+              "options": {
+                "0": { "text": "Недоступен", "color": "red", "index": 0 },
+                "1": { "text": "Работает", "color": "green", "index": 1 }
+              }
+            }
           ],
           "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
         },
@@ -140,7 +155,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-          "expr": "up{job=\"ping_metek\"}",
+          "expr": "up{job=\"ins_control_metek\"}",
           "legendFormat": "metek",
           "refId": "A"
         }
@@ -164,8 +179,13 @@
             ]
           },
           "mappings": [
-            { "type": "value", "options": { "0": { "text": "Недоступен", "color": "red", "index": 0 } } },
-            { "type": "value", "options": { "1": { "text": "Работает", "color": "green", "index": 1 } } }
+            {
+              "type": "value",
+              "options": {
+                "0": { "text": "Недоступен", "color": "red", "index": 0 },
+                "1": { "text": "Работает", "color": "green", "index": 1 }
+              }
+            }
           ],
           "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
         },
@@ -181,7 +201,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-          "expr": "up{job=\"ping_sptk\"}",
+          "expr": "up{job=\"ins_control_sptk_ub1\"}",
           "legendFormat": "sptk",
           "refId": "A"
         }
@@ -205,8 +225,13 @@
             ]
           },
           "mappings": [
-            { "type": "value", "options": { "0": { "text": "Недоступен", "color": "red", "index": 0 } } },
-            { "type": "value", "options": { "1": { "text": "Работает", "color": "green", "index": 1 } } }
+            {
+              "type": "value",
+              "options": {
+                "0": { "text": "Недоступен", "color": "red", "index": 0 },
+                "1": { "text": "Работает", "color": "green", "index": 1 }
+              }
+            }
           ],
           "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
         },
@@ -222,7 +247,7 @@
       "targets": [
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
-          "expr": "up{job=\"ping_titov\"}",
+          "expr": "up{job=\"ins_control_titov_ub2\"}",
           "legendFormat": "titov",
           "refId": "A"
         }
@@ -246,8 +271,13 @@
             ]
           },
           "mappings": [
-            { "type": "value", "options": { "0": { "text": "Недоступен", "color": "red", "index": 0 } } },
-            { "type": "value", "options": { "1": { "text": "Работает", "color": "green", "index": 1 } } }
+            {
+              "type": "value",
+              "options": {
+                "0": { "text": "Недоступен", "color": "red", "index": 0 },
+                "1": { "text": "Работает", "color": "green", "index": 1 }
+              }
+            }
           ],
           "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
         },
