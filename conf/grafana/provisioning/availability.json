@@ -19,7 +19,9 @@
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_asutp\"}",
           "legendFormat": "asutp",
-          "refId": "A"
+          "refId": "A",
+          "instant": false,
+          "range": true
         }
       ],
       "options": {
@@ -49,7 +51,12 @@
               }
             }
           ],
-          "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
+          "custom": {
+            "fillOpacity": 80,
+            "lineWidth": 0,
+            "spanNulls": false,
+            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
+          }
         },
         "overrides": []
       }
@@ -65,7 +72,9 @@
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_test\"}",
           "legendFormat": "test",
-          "refId": "A"
+          "refId": "A",
+          "instant": false,
+          "range": true
         }
       ],
       "options": {
@@ -95,7 +104,12 @@
               }
             }
           ],
-          "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
+          "custom": {
+            "fillOpacity": 80,
+            "lineWidth": 0,
+            "spanNulls": false,
+            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
+          }
         },
         "overrides": []
       }
@@ -111,7 +125,9 @@
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_avik\"}",
           "legendFormat": "avik",
-          "refId": "A"
+          "refId": "A",
+          "instant": false,
+          "range": true
         }
       ],
       "options": {
@@ -141,7 +157,12 @@
               }
             }
           ],
-          "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
+          "custom": {
+            "fillOpacity": 80,
+            "lineWidth": 0,
+            "spanNulls": false,
+            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
+          }
         },
         "overrides": []
       }
@@ -157,7 +178,9 @@
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_metek\"}",
           "legendFormat": "metek",
-          "refId": "A"
+          "refId": "A",
+          "instant": false,
+          "range": true
         }
       ],
       "options": {
@@ -187,7 +210,12 @@
               }
             }
           ],
-          "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
+          "custom": {
+            "fillOpacity": 80,
+            "lineWidth": 0,
+            "spanNulls": false,
+            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
+          }
         },
         "overrides": []
       }
@@ -203,7 +231,9 @@
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_sptk_ub1\"}",
           "legendFormat": "sptk",
-          "refId": "A"
+          "refId": "A",
+          "instant": false,
+          "range": true
         }
       ],
       "options": {
@@ -233,7 +263,12 @@
               }
             }
           ],
-          "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
+          "custom": {
+            "fillOpacity": 80,
+            "lineWidth": 0,
+            "spanNulls": false,
+            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
+          }
         },
         "overrides": []
       }
@@ -249,7 +284,9 @@
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_titov_ub2\"}",
           "legendFormat": "titov",
-          "refId": "A"
+          "refId": "A",
+          "instant": false,
+          "range": true
         }
       ],
       "options": {
@@ -279,7 +316,12 @@
               }
             }
           ],
-          "custom": { "fillOpacity": 80, "lineWidth": 0, "spanNulls": false }
+          "custom": {
+            "fillOpacity": 80,
+            "lineWidth": 0,
+            "spanNulls": false,
+            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
+          }
         },
         "overrides": []
       }
