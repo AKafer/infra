@@ -47,6 +47,10 @@ services:
       - GF_SERVER_SERVE_FROM_SUB_PATH=true
       - GF_SECURITY_ADMIN_USER=${METRICS_USER}
       - GF_SECURITY_ADMIN_PASSWORD=${METRICS_PASSWORD}
+      - GF_UNIFIED_ALERTING_ENABLED=true
+      - GF_ALERTING_ENABLED=false
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
     depends_on:
       - prometheus
       - loki
@@ -54,6 +58,7 @@ services:
       - ./conf/grafana/datasources.yaml:/etc/grafana/provisioning/datasources/datasources.yaml
       - ./conf/grafana/provisioning/dashboards.yaml:/etc/grafana/provisioning/dashboards/dashboards.yaml
       - ./conf/grafana/provisioning:/etc/grafana/provisioning/dashboards
+      - ./conf/grafana/provisioning/alerting:/etc/grafana/provisioning/alerting
       - grafana_data:/var/lib/grafana
     networks:
       - monitor
