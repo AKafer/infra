@@ -1,12 +1,10 @@
 {
-  "__inputs": [],
-  "__requires": [],
-  "annotations": { "list": [] },
-  "editable": true,
-  "fiscalYearStartMonth": 0,
-  "graphTooltip": 0,
-  "id": null,
-  "links": [],
+  "title": "Доступность приложений",
+  "uid": "ins_control_availability",
+  "schemaVersion": 38,
+  "version": 2,
+  "refresh": "1m",
+  "time": { "from": "now-1h", "to": "now" },
   "panels": [
     {
       "id": 1,
@@ -18,19 +16,14 @@
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_asutp\"}",
-          "legendFormat": "asutp",
-          "refId": "A",
-          "instant": false,
-          "range": true
+          "legendFormat": "asutp"
         }
       ],
       "options": {
         "mergeValues": true,
-        "showValue": "never",
-        "fillOpacity": 80,
+        "showValue": "auto",
         "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" },
-        "tooltip": { "mode": "single", "sort": "none" }
+        "legend": { "displayMode": "hidden", "placement": "bottom" }
       },
       "fieldConfig": {
         "defaults": {
@@ -50,15 +43,8 @@
                 "1": { "text": "Работает", "color": "green", "index": 1 }
               }
             }
-          ],
-          "custom": {
-            "fillOpacity": 80,
-            "lineWidth": 0,
-            "spanNulls": true,
-            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
-          }
-        },
-        "overrides": []
+          ]
+        }
       }
     },
     {
@@ -71,19 +57,14 @@
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_test\"}",
-          "legendFormat": "test",
-          "refId": "A",
-          "instant": false,
-          "range": true
+          "legendFormat": "test"
         }
       ],
       "options": {
         "mergeValues": true,
-        "showValue": "never",
-        "fillOpacity": 80,
+        "showValue": "auto",
         "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" },
-        "tooltip": { "mode": "single", "sort": "none" }
+        "legend": { "displayMode": "hidden", "placement": "bottom" }
       },
       "fieldConfig": {
         "defaults": {
@@ -103,15 +84,8 @@
                 "1": { "text": "Работает", "color": "green", "index": 1 }
               }
             }
-          ],
-          "custom": {
-            "fillOpacity": 80,
-            "lineWidth": 0,
-            "spanNulls": true,
-            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
-          }
-        },
-        "overrides": []
+          ]
+        }
       }
     },
     {
@@ -124,19 +98,14 @@
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_avik\"}",
-          "legendFormat": "avik",
-          "refId": "A",
-          "instant": false,
-          "range": true
+          "legendFormat": "avik"
         }
       ],
       "options": {
         "mergeValues": true,
-        "showValue": "never",
-        "fillOpacity": 80,
+        "showValue": "auto",
         "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" },
-        "tooltip": { "mode": "single", "sort": "none" }
+        "legend": { "displayMode": "hidden", "placement": "bottom" }
       },
       "fieldConfig": {
         "defaults": {
@@ -156,15 +125,8 @@
                 "1": { "text": "Работает", "color": "green", "index": 1 }
               }
             }
-          ],
-          "custom": {
-            "fillOpacity": 80,
-            "lineWidth": 0,
-            "spanNulls": true,
-            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
-          }
-        },
-        "overrides": []
+          ]
+        }
       }
     },
     {
@@ -177,19 +139,14 @@
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_metek\"}",
-          "legendFormat": "metek",
-          "refId": "A",
-          "instant": false,
-          "range": true
+          "legendFormat": "metek"
         }
       ],
       "options": {
         "mergeValues": true,
-        "showValue": "never",
-        "fillOpacity": 80,
+        "showValue": "auto",
         "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" },
-        "tooltip": { "mode": "single", "sort": "none" }
+        "legend": { "displayMode": "hidden", "placement": "bottom" }
       },
       "fieldConfig": {
         "defaults": {
@@ -209,15 +166,8 @@
                 "1": { "text": "Работает", "color": "green", "index": 1 }
               }
             }
-          ],
-          "custom": {
-            "fillOpacity": 80,
-            "lineWidth": 0,
-            "spanNulls": true,
-            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
-          }
-        },
-        "overrides": []
+          ]
+        }
       }
     },
     {
@@ -230,19 +180,14 @@
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_sptk_ub1\"}",
-          "legendFormat": "sptk",
-          "refId": "A",
-          "instant": false,
-          "range": true
+          "legendFormat": "sptk"
         }
       ],
       "options": {
         "mergeValues": true,
-        "showValue": "never",
-        "fillOpacity": 80,
+        "showValue": "auto",
         "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" },
-        "tooltip": { "mode": "single", "sort": "none" }
+        "legend": { "displayMode": "hidden", "placement": "bottom" }
       },
       "fieldConfig": {
         "defaults": {
@@ -262,15 +207,8 @@
                 "1": { "text": "Работает", "color": "green", "index": 1 }
               }
             }
-          ],
-          "custom": {
-            "fillOpacity": 80,
-            "lineWidth": 0,
-            "spanNulls": true,
-            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
-          }
-        },
-        "overrides": []
+          ]
+        }
       }
     },
     {
@@ -283,19 +221,14 @@
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_titov_ub2\"}",
-          "legendFormat": "titov",
-          "refId": "A",
-          "instant": false,
-          "range": true
+          "legendFormat": "titov"
         }
       ],
       "options": {
         "mergeValues": true,
-        "showValue": "never",
-        "fillOpacity": 80,
+        "showValue": "auto",
         "rowHeight": 0.9,
-        "legend": { "displayMode": "hidden", "placement": "bottom" },
-        "tooltip": { "mode": "single", "sort": "none" }
+        "legend": { "displayMode": "hidden", "placement": "bottom" }
       },
       "fieldConfig": {
         "defaults": {
@@ -315,25 +248,9 @@
                 "1": { "text": "Работает", "color": "green", "index": 1 }
               }
             }
-          ],
-          "custom": {
-            "fillOpacity": 80,
-            "lineWidth": 0,
-            "spanNulls": true,
-            "hideFrom": { "tooltip": false, "viz": false, "legend": false }
-          }
-        },
-        "overrides": []
+          ]
+        }
       }
     }
-  ],
-  "refresh": "1m",
-  "schemaVersion": 38,
-  "tags": ["availability"],
-  "time": { "from": "now-1h", "to": "now" },
-  "timepicker": {},
-  "timezone": "browser",
-  "title": "Доступность приложений",
-  "uid": "ins_control_availability",
-  "version": 1
+  ]
 }
