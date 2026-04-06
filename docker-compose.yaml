@@ -51,6 +51,7 @@ services:
       - GF_ALERTING_ENABLED=false
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
       - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      - TELEGRAM_CHAT_ID_STR="${TELEGRAM_CHAT_ID}"
     depends_on:
       - prometheus
       - loki
