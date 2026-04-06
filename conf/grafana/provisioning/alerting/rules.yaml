@@ -16,6 +16,9 @@ groups:
           summary: "Сервис {{ $labels.instance }} недоступен"
         data:
           - refId: A
+            relativeTimeRange:
+              from: 300
+              to: 0
             datasourceUid: PBFA97CFB590B2093
             model:
               expr: up{job=~"ins_control_.+"}
