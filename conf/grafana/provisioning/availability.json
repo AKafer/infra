@@ -54,7 +54,7 @@
           "custom": {
             "fillOpacity": 80,
             "lineWidth": 0,
-            "spanNulls": false,
+            "spanNulls": true,
             "hideFrom": { "tooltip": false, "viz": false, "legend": false }
           }
         },
@@ -107,7 +107,7 @@
           "custom": {
             "fillOpacity": 80,
             "lineWidth": 0,
-            "spanNulls": false,
+            "spanNulls": true,
             "hideFrom": { "tooltip": false, "viz": false, "legend": false }
           }
         },
@@ -160,7 +160,7 @@
           "custom": {
             "fillOpacity": 80,
             "lineWidth": 0,
-            "spanNulls": false,
+            "spanNulls": true,
             "hideFrom": { "tooltip": false, "viz": false, "legend": false }
           }
         },
@@ -213,7 +213,7 @@
           "custom": {
             "fillOpacity": 80,
             "lineWidth": 0,
-            "spanNulls": false,
+            "spanNulls": true,
             "hideFrom": { "tooltip": false, "viz": false, "legend": false }
           }
         },
@@ -266,7 +266,7 @@
           "custom": {
             "fillOpacity": 80,
             "lineWidth": 0,
-            "spanNulls": false,
+            "spanNulls": true,
             "hideFrom": { "tooltip": false, "viz": false, "legend": false }
           }
         },
@@ -319,7 +319,7 @@
           "custom": {
             "fillOpacity": 80,
             "lineWidth": 0,
-            "spanNulls": false,
+            "spanNulls": true,
             "hideFrom": { "tooltip": false, "viz": false, "legend": false }
           }
         },
@@ -330,7 +330,7 @@
   "refresh": "1m",
   "schemaVersion": 38,
   "tags": ["availability"],
-  "time": { "from": "now-24h", "to": "now" },
+  "time": { "from": "now-1h", "to": "now" },
   "timepicker": {},
   "timezone": "browser",
   "title": "Доступность приложений",
