@@ -94,6 +94,18 @@ services:
     networks:
       - monitor
 
+  noip:
+    image: coppit/no-ip
+    container_name: infra_noip
+    environment:
+      - USERNAME=${NOIP_USERNAME}
+      - PASSWORD=${NOIP_PASSWORD}
+      - DOMAINS=infra-projects.ddns.net
+      - INTERVAL=5m
+    restart: unless-stopped
+    networks:
+      - monitor
+
 volumes:
   prometheus_data:
   grafana_data:

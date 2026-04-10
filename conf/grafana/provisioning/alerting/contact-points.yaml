@@ -11,7 +11,7 @@ contactPoints:
           chatid: ${TELEGRAM_CHAT_ID_STR}
           message: |
             🔴 *Сервис недоступен*
-            Сервис: {{ index .Labels "instance" }}
+            {{ range .Alerts }}Сервис: {{ index .Labels "instance" }}
             Статус: {{ .Status }}
-            {{ if .EndsAt }}Восстановлен: {{ .EndsAt }}{{ end }}
+            {{ end }}
         disableResolveMessage: false

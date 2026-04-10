@@ -125,3 +125,22 @@ scrape_configs:
       - targets: ["titov.ias-app.ru"]
         labels:
           instance: "titov"
+
+  - job_name: "ins_control_promfaber"
+    basic_auth:
+      username: 'admin@gmail.com'
+      password_file: /etc/prometheus/metrics_pwd
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ["promfaber.ias-app.ru"]
+        labels:
+          instance: "promfaber"
+
+  - job_name: "ping_promfaber"
+    metrics_path: /ping/
+    scheme: https
+    static_configs:
+      - targets: ["promfaber.ias-app.ru"]
+        labels:
+          instance: "promfaber"
