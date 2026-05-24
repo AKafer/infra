@@ -144,3 +144,11 @@ scrape_configs:
       - targets: ["promfaber.ias-app.ru"]
         labels:
           instance: "promfaber"
+
+  - job_name: "ping_antrasha"
+    metrics_path: /ping/
+    scheme: https
+    static_configs:
+      - targets: ["new.antrasha.ru"]
+        labels:
+          instance: "antrasha"
