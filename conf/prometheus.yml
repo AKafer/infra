@@ -145,8 +145,8 @@ scrape_configs:
         labels:
           instance: "promfaber"
 
-  - job_name: "ping_antrasha"
-    metrics_path: /ping/
+  - job_name: "antrasha_app"
+    metrics_path: /metrics
     scheme: https
     static_configs:
       - targets: ["new.antrasha.ru"]
