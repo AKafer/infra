@@ -152,3 +152,22 @@ scrape_configs:
       - targets: ["new.antrasha.ru"]
         labels:
           instance: "antrasha"
+
+  - job_name: "ins_control_ts"
+    basic_auth:
+      username: 'admin@gmail.com'
+      password_file: /etc/prometheus/metrics_pwd
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ["ts.ias-app.ru"]
+        labels:
+          instance: "ts"
+
+  - job_name: "ping_ts"
+    metrics_path: /ping/
+    scheme: https
+    static_configs:
+      - targets: ["ts.ias-app.ru"]
+        labels:
+          instance: "ts"

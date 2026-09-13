@@ -2,7 +2,7 @@
   "title": "Доступность приложений",
   "uid": "ins_control_availability",
   "schemaVersion": 38,
-  "version": 3,
+  "version": 4,
   "refresh": "1m",
   "time": { "from": "now-1h", "to": "now" },
   "panels": [
@@ -47,6 +47,11 @@
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
           "expr": "up{job=\"ins_control_promfaber\"}",
           "legendFormat": "promfaber.ias-app.ru"
+        },
+        {
+          "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
+          "expr": "up{job=\"ins_control_ts\"}",
+          "legendFormat": "ts.ias-app.ru"
         },
         {
           "datasource": { "type": "prometheus", "uid": "PBFA97CFB590B2093" },
