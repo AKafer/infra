@@ -21,7 +21,7 @@ groups:
               to: 0
             datasourceUid: PBFA97CFB590B2093
             model:
-              expr: up{job=~"ins_control_.+|ping_antrasha"}
+              expr: up{job=~"ins_control_.+|ias_admin|ping_antrasha"}
               instant: true
               range: false
               intervalMs: 1000
