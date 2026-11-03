@@ -4,14 +4,12 @@ contactPoints:
   - orgId: 1
     name: Telegram
     receivers:
-      - uid: telegram_receiver
-        type: telegram
+      - uid: telegram_relay_receiver
+        type: webhook
         settings:
-          bottoken: ${TELEGRAM_BOT_TOKEN}
-          chatid: ${TELEGRAM_CHAT_ID_STR}
-          message: |
-            🔴 *Сервис недоступен*
-            {{ range .Alerts }}Сервис: {{ index .Labels "instance" }}
-            Статус: {{ .Status }}
-            {{ end }}
+          url: https://tg-relay.akafer82.workers.dev/bot${TELEGRAM_BOT_TOKEN}/sendMessage
+          httpMethod: POST
+          payload:
+            template: >-
+              {{ $$t := "" }}{{ if eq .Status "firing" }}{{ $$t = "🔴 Сервис недоступен" }}{{ else }}{{ $$t = "✅ Сервис снова доступен" }}{{ end }}{{ range .Alerts }}{{ $$t = print $$t "\nСервис: " (index .Labels "instance") }}{{ end }}{{ coll.Dict "chat_id" "${TELEGRAM_CHAT_ID}" "text" $$t | data.ToJSON }}
         disableResolveMessage: false
