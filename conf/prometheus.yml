@@ -171,3 +171,14 @@ scrape_configs:
       - targets: ["ts.ias-app.ru"]
         labels:
           instance: "ts"
+
+  - job_name: "ias_admin"
+    basic_auth:
+      username: 'admin@gmail.com'
+      password_file: /etc/prometheus/metrics_pwd
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ["admin.ias-app.ru"]
+        labels:
+          instance: "admin"
